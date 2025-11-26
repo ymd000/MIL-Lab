@@ -166,3 +166,6 @@ src/misc
 .vscode
 src/debug
 core.*
+
+# For my env
+!mil_lab/
