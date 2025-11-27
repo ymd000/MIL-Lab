@@ -15,13 +15,16 @@ classifiers = [
 dynamic = ["dependencies"]
 
 [project.scripts] # Scripts for Setuptools go under [project.scripts]
-create_model = "src.builder:create_model"
+create_model = "mil_lab.builder:create_model"
 
 [tool.setuptools.dynamic]
 dependencies = {file = "requirements.txt"}
 
 [tool.setuptools.packages.find]
 exclude = ["dev*", "temp*", "docs", "dist*", "scripts*", "tests*", "checkpoints*"]
+
+[tool.setuptools.package-data]
+mil_lab = ["model_configs/**/*.yaml"]
 
 [tool.wheel]
 exclude = ["dev*", "temp*", "docs", "dist*", "scripts*", "tests*", "checkpoints*"]
