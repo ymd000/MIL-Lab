@@ -1,9 +1,9 @@
-from src.models.mil_template import MIL
+from mil_lab.models.mil_template import MIL
 from transformers import PretrainedConfig, PreTrainedModel, AutoModel, AutoConfig
 
 import torch
 import torch.nn as nn
-from src.components import create_mlp
+from mil_lab.components import create_mlp
 
 
 class TransLayer(nn.Module):

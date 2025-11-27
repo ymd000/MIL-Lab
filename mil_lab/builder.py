@@ -4,9 +4,9 @@ import torch.nn as nn
 import yaml
 import os
 from typing import Any, Callable, Dict, List, Optional, Tuple, Union
-from src.builders.ModelDict import ModelDict
-from src.builder_utils import _cfg, build_model_with_cfg
-from src._global_mappings import REPO_PATH, CONFIG_PATH, ENCODER_DIM_MAPPING, MODEL_ENTRYPOINTS, MODEL_SAVE_PATH  # todo, should this be all caps or not?
+from mil_lab.builders.ModelDict import ModelDict
+from mil_lab.builder_utils import _cfg, build_model_with_cfg
+from mil_lab._global_mappings import REPO_PATH, CONFIG_PATH, ENCODER_DIM_MAPPING, MODEL_ENTRYPOINTS, MODEL_SAVE_PATH  # todo, should this be all caps or not?
 from pathlib import Path
 
 def save_model(model: nn.Module,

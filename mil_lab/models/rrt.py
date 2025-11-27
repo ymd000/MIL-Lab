@@ -3,7 +3,7 @@ from dataclasses import dataclass
 import torch.nn.functional as F
 from torch import nn
 
-from src.models.mil_template import MIL
+from mil_lab.models.mil_template import MIL
 from transformers import PretrainedConfig
 from transformers import PreTrainedModel, AutoConfig, AutoModel
 
@@ -422,7 +422,7 @@ def get_act(act):
 
 
 import torch.nn as nn
-from src.components.nystrom_attention import NystromAttention
+from mil_lab.components.nystrom_attention import NystromAttention
 
 
 # --------------------------------------------------------
