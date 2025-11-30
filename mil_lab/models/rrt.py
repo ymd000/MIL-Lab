@@ -709,7 +709,7 @@ class RegionAttntion(nn.Module):
 
 import torch
 import torch.nn as nn
-from timm.models.layers import DropPath
+from timm.layers import DropPath
 import numpy as np
 
 
