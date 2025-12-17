@@ -41,6 +41,7 @@ def create_model(
         from_pretrained: bool = False,
         pretrained_strict: bool = False,
         keep_classifier: bool = False,
+        pretrained: bool = True,  # edit at 20251217
         **kwargs,
 ):
     """
@@ -63,7 +64,7 @@ def create_model(
         ValueError: If pretrained=True but no pretrained config is available for the model.
         NotImplementedError: If the model name is not in the available models.
     """
-    model_dict = ModelDict.from_string(model_name)
+    model_dict = ModelDict.from_string(model_name, pretrained=pretrained)  # edit at 20251217
     pretrained_cfg = _create_pretrained_config(model_dict,
                                                hf_source=hf_base_repo,
                                                local_source=MODEL_SAVE_PATH)
